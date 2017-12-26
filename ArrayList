@@ -1,0 +1,30 @@
+public class ArrayListExample {
+
+	public static void main(String[] args) {
+
+		List<String> countrylist = new LinkedList<>(); // putting <> is called
+														// Generic.
+		countrylist.add("China");
+		countrylist.add("Nepal");
+		countrylist.add("India");
+		countrylist.add("Brasil");
+		countrylist.add("Nederland");
+
+		countrylist.remove("India");
+		Iterator<String> itr = countrylist.iterator();
+		while (itr.hasNext()) {
+			String country = itr.next();
+			System.out.println(country);
+
+			if (country.equals("Nederland")) {
+				itr.remove();
+			}
+		}
+
+		// By for Loop.
+		System.out.println("---------------");
+		for (String country : countrylist) {
+			System.out.println(country);
+		}
+	}
+}
